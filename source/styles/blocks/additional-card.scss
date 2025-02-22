@@ -1,0 +1,19 @@
+.additional-card {
+  font-size: 14px;
+  line-height: 14px;
+  color: $dark4;
+}
+
+.additional-card__title {
+  @include heading;
+  color: $dark2;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.additional-card__button {
+  @include basic-button;
+  font-size: 16px;
+  line-height: 20px;
+}

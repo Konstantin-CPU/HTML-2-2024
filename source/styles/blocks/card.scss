@@ -1,0 +1,23 @@
+.card__link {
+  @include link;
+}
+
+.card__title {
+  @include heading;
+  font-style: 16px;
+  line-height: 20px;
+  color: $dark2;
+  text-transform: uppercase;
+}
+
+.card__description {
+  color: $dark4;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.card__button {
+  @include basic-button;
+  font-size: 16px;
+  line-height: 20px;
+}
