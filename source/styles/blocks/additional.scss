@@ -1,0 +1,9 @@
+.additional__list {
+  @include list;
+}
+
+.additional__title {
+  @include heading;
+  font-size: 24px;
+  line-height: 24px;
+}

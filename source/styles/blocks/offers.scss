@@ -1,0 +1,28 @@
+.offers {
+  font-family: $secondary-font;
+}
+
+.offers__title {
+  @include heading;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.offers__text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.offers__input {
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  border-radius: 0;
+  font-family: $secondary-font;
+}
+
+.offers__button {
+  @include basic-button;
+  font-size: 20px;
+  line-height: 26px;
+}

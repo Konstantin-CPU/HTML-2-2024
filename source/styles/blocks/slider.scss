@@ -1,0 +1,12 @@
+@media (min-width: $tablet-width) {
+  .slider {
+    min-height: 462px;
+    background-color: $darkEA;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .slider {
+    display: none;
+  }
+}

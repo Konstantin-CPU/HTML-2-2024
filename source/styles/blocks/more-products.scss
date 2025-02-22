@@ -1,0 +1,20 @@
+.more-products {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.more-products__text {
+  @include heading;
+  color: $dark1;
+  text-transform: uppercase;
+}
+
+.more-products__secondary-text {
+  color: $dark4;
+}
+
+.more-products__button {
+  @include basic-button;
+  background-color: $darkF2;
+  color: $dark4;
+}
