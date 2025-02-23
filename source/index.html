@@ -10,6 +10,8 @@
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/apple.png"><!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <script src="scripts/index.js" defer></script>
 </head>
 
@@ -18,23 +20,23 @@
     <header class="page__header header">
       <div class="header__container">
         <div class="header__wrapper">
-          <a class="header__logo" href="#">
+          <a class="header__logo" href="#" aria-label="Логотип">
             <picture>
               <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="202" height="59" type="image/svg+xml">
               <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="174" height="50" type="image/svg+xml">
               <img class="header__logo-image" src="images/logo-mobile.svg" height="38" width="33" alt="Логотип сайта">
             </picture>
           </a>
-          <a class="header__text-logo" href="#">
+          <a class="header__text-logo" href="#" aria-label="Логотип">
             <img src="images/logo-text-mobile.svg" width="101" height="18" alt="Кэт енерджи">
           </a>
           <button class="header__toggle" type="button">
             <span class="visually-hidden">Открыть/закрыть меню</span>
           </button>
         </div>
-        <nav class="header__navigation navigation">
+        <nav class="header__navigation navigation navigation--index">
           <ul class="navigation__list">
-            <li class="navigation__item navigation__item--current">
+            <li class="navigation__item">
               <a class="navigation__link navigation__link--current" href="#">главная</a>
             </li>
             <li class="navigation__item">
@@ -105,12 +107,16 @@
           <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
           <div class="example__info-block">
             <div class="example__achievment-wrapper">
-              <p class="example__achievment">5 КГ
+
+              <div class="example__achievment">
+                <span class="example__achievment-result">5 КГ</span>
                 <span class="example__achievment-label">снижение веса</span>
-              </p>
-              <p class="example__achievment">60 ДНЕЙ
+              </div>
+              <div class="example__achievment">
+                <span class="example__achievment-result">60 ДНЕЙ</span>
                 <span class="example__achievment-label">затрачено времени</span>
-              </p>
+              </div>
+
             </div>
             <p class="example__summary">
               <span class="example__summary-text">Затраты на питание:</span>
@@ -118,7 +124,28 @@
             </p>
           </div>
         </div>
-        <div class="example__slider slider"></div>
+        <div class="example__slider slider">
+          <button class="slider__button" type="button">
+            <span class="visually-hidden">Ползунок слайдера</span>
+          </button>
+          <div class="slider__wrapper-before">
+            <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="images/before-tablet@1x.webp 1x, images/before-tablet@2x.webp 2x" width="560" height="512">
+              <source type="image/webp" srcset="images/before-mobile@1x.webp 1x, images/before-mobile@2x.webp 2x" width="280" height="256">
+
+              <source type="image/png" media="(min-width: 768px)" srcset="images/before-tablet@1x.png 1x, images/before-tablet@2x.png 2x" width="560" height="512">
+              <img class="slider__image slider__image--before" src="images/before-mobile@1x.png" srcset="images/before-mobile@2x.png 2x" width="280" height="256" alt="Кот Борис до корма Cat Energy Slim - тучный.">
+            </picture>
+          </div>
+          <div class="slider__wrapper-after">
+            <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="images/after-tablet@1x.webp 1x, images/after-tablet@2x.webp 2x" width="560" height="512">
+              <source type="image/webp" srcset="images/after-mobile@1x.webp 1x, images/after-mobile@2x.webp 2x" width="280" height="256">
+              <source type="image/png" media="(min-width: 768px)" srcset="images/after-tablet@1x.png 1x, images/after-tablet@2x.png 2x" width="560" height="512">
+              <img class="slider__image slider__image--after" src="images/after-mobile@1x.png" srcset="images/after-mobile@2x.png 2x" width="280" height="256" alt="Кот Борис после корма Cat Energy Slim - здоровый.">
+            </picture>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="page__footer footer">
@@ -138,7 +165,7 @@
         <div class="contacts__container">
           <h2 class="visually-hidden">Контакты</h2>
           <div class="contacts__logo-container">
-            <a class="contacts__logo" href="#">
+            <a class="contacts__logo" href="#" aria-label="Логотип">
               <img class="contacts__logo-image" width="128" height="24" src="images/logo-text-mobile.svg" alt="Кэт енерджи">
             </a>
           </div>
@@ -162,8 +189,13 @@
           <div class="contacts__copyright-container">
             <a class="contacts__copyright" href="https://htmlacademy.ru">
               <span class="contacts__copyright-text">HTML Academy</span>
-              <svg class="contacts__copyright-logo" width="27" height="34">
-                <use href="icons/stack.svg#html-logo">
+              <svg class="contacts__copyright-logo" width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" clip-path="url(#clip0_152291_295)">
+                  <path class="contacts__copyright-symbol" d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#666666" />
+                </g>
+                <defs>
+                  <rect width="27" height="34" fill="white" />
+                </defs>
               </svg>
             </a>
           </div>

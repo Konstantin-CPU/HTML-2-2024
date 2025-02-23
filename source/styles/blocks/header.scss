@@ -1,3 +1,7 @@
+.header--catalog {
+  border-bottom: 1px solid $darkD9;
+}
+
 .header__wrapper {
   margin: 0 auto;
   padding: 15px 20px 10px;
@@ -13,11 +17,21 @@
   background: url("../../icons/burger.svg") 50% no-repeat;
   background-color: transparent;
   transform: translateY(-5px);
+  cursor: pointer;
 
-  &--opened {
-    background-image: url("../../icons/cross.svg");
-    background-size: 18px 18px;
+  &:hover,
+  &:focus {
+    opacity: 0.6;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.header__toggle--opened {
+  background-image: url("../../icons/cross.svg");
+  background-size: 18px 18px;
 }
 
 .header__logo {
@@ -40,13 +54,16 @@
     width: 100%;
   }
 
+  .header--catalog {
+    border-bottom: 0;
+  }
+
   .header__container {
     padding: 25px 34px 0 30px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
   }
 
   .header__wrapper {

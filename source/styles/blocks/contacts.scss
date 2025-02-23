@@ -4,7 +4,7 @@
 }
 
 .contacts__container {
-  padding: 37px 20px 0;
+  padding: 40px 20px 0;
 }
 
 .contacts__logo-container {
@@ -17,6 +17,15 @@
   padding-bottom: 14px;
   border-bottom: 1px solid $darkD9;
   width: 100%;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__socials-list {
@@ -39,25 +48,29 @@
   mask-repeat: no-repeat;
   background-color: $dark6;
 
-
-  &--vk {
-    mask-image: url("../../icons/stack.svg#vk");
-    mask-size: 27px 17px;
-  }
-
-  &--youtube {
-    mask-image: url("../../icons/stack.svg#youtube");
-    mask-size: 24px 21px;
-  }
-
-  &--tg {
-    mask-image: url("../../icons/stack.svg#telegram");
-    mask-size: 20px 19px;
-  }
-
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $basic-green;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.contacts__socials-link--vk {
+  mask-image: url("../../icons/stack.svg#vk");
+  mask-size: 27px 17px;
+}
+
+.contacts__socials-link--youtube {
+  mask-image: url("../../icons/stack.svg#youtube");
+  mask-size: 24px 21px;
+}
+
+.contacts__socials-link--tg {
+  mask-image: url("../../icons/stack.svg#telegram");
+  mask-size: 20px 19px;
 }
 
 .contacts__copyright {
@@ -72,8 +85,15 @@
 
   &:hover,
   &:focus {
-    .contacts__copyright-logo {
+    .contacts__copyright-symbol {
       fill: $basic-green;
+    }
+  }
+
+  &:active {
+    .contacts__copyright-text,
+    .contacts__copyright-logo {
+      opacity: 0.3;
     }
   }
 }
