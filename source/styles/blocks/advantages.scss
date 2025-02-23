@@ -7,7 +7,7 @@
   @include heading;
   font-size: 36px;
   line-height: 40px;
-  margin-bottom: 40px;
+  margin: 0 0 40px;
 }
 
 .advantages__list {
@@ -36,33 +36,33 @@
     background-position: 45% 50%;
     background-repeat: no-repeat;
   }
+}
 
-  &--leaf {
-    &::before {
-      background-image: url("../../icons/stack.svg#leaf");
-      background-size: 27px 29px;
-    }
+.advantages__item--leaf {
+  &::before {
+    background-image: url("../../icons/stack.svg#leaf");
+    background-size: 27px 29px;
   }
+}
 
-  &--chemistry {
-    &::before {
-      background-image: url("../../icons/stack.svg#chemistry");
-      background-size: 26px 29px;
-    }
+.advantages__item--chemistry {
+  &::before {
+    background-image: url("../../icons/stack.svg#chemistry");
+    background-size: 26px 29px;
   }
+}
 
-  &--food {
-    &::before {
-      background-image: url("../../icons/stack.svg#eat");
-      background-size: 25px 30px;
-    }
+.advantages__item--food {
+  &::before {
+    background-image: url("../../icons/stack.svg#eat");
+    background-size: 25px 30px;
   }
+}
 
-  &--clock {
-    &::before {
-      background-image: url("../../icons/stack.svg#clock");
-      background-size: 26px 31px;
-    }
+.advantages__item--clock {
+  &::before {
+    background-image: url("../../icons/stack.svg#clock");
+    background-size: 26px 31px;
   }
 }
 

@@ -2,33 +2,31 @@
   position: relative;
   background-color: $darkF2;
   padding: 30px 20px 18px;
+}
 
-
-  &--slim {
-    &::before {
-      content: "";
-      position: absolute;
-      background: url("../../icons/stack.svg#cat-slim") 50% no-repeat;
-      width: 50px;
-      height: 53px;
-      top: 21px;
-      left: 20px;
-    }
-  }
-
-  &--bulk {
-    &::before {
-      content: "";
-      position: absolute;
-      background: url("../../icons/stack.svg#cat-muscle") 50% no-repeat;
-      width: 67px;
-      height: 50px;
-      top: 24px;
-      left: 13px;
-    }
+.program--slim {
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../../icons/stack.svg#cat-slim") 50% no-repeat;
+    width: 50px;
+    height: 53px;
+    top: 21px;
+    left: 20px;
   }
 }
 
+.program--bulk {
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../../icons/stack.svg#cat-muscle") 50% no-repeat;
+    width: 67px;
+    height: 50px;
+    top: 24px;
+    left: 13px;
+  }
+}
 
 .program__title {
   @include heading;
@@ -45,6 +43,7 @@
   color: $dark4;
   padding-bottom: 21px;
   border-bottom: 1px solid $darkD9;
+  margin: 0;
 }
 
 .program__link {
@@ -82,26 +81,26 @@
 @media (min-width: $tablet-width) {
   .program {
     padding: 76px 54px 57px;
+  }
 
-    &--slim {
-      &::before {
-        top: 81px;
-        left: auto;
-        right: 63px;
-        width: 200px;
-        height: 211px;
-      }
+  .program--slim {
+    &::before {
+      top: 81px;
+      left: auto;
+      right: 63px;
+      width: 200px;
+      height: 211px;
     }
+  }
 
-    &--bulk {
-      &::before {
-        top: 91px;
-        left: auto;
-        right: 26px;
-        width: 278px;
-        height: 200px;
-        z-index: 1;
-      }
+  .program--bulk {
+    &::before {
+      top: 91px;
+      left: auto;
+      right: 26px;
+      width: 278px;
+      height: 200px;
+      z-index: 1;
     }
   }
 
@@ -131,23 +130,23 @@
 @media (min-width: $desktop-width) {
   .program {
     padding: 77px 52px 60px;
+  }
 
-    &--slim {
-      &::before {
-        top: 41px;
-        left: 52px;
-        width: 100px;
-        height: 106px;
-      }
+  .program--slim {
+    &::before {
+      top: 41px;
+      left: 52px;
+      width: 100px;
+      height: 106px;
     }
+  }
 
-    &--bulk {
-      &::before {
-        top: 47px;
-        left: 33px;
-        width: 134px;
-        height: 100px;
-      }
+  .program--bulk {
+    &::before {
+      top: 47px;
+      left: 33px;
+      width: 134px;
+      height: 100px;
     }
   }
 

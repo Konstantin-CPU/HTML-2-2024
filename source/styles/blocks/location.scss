@@ -1,3 +1,7 @@
+.location--grey {
+  background-color: $darkF2;
+}
+
 .location__container {
   padding: 26px 20px;
   display: grid;
@@ -9,15 +13,18 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .location__info {
   color: $dark4;
   font-size: 14px;
   line-height: 20px;
+  margin: 0;
 }
 
 .location__map {
+  display: block;
   width: 100%;
 }
 

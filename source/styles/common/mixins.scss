@@ -35,7 +35,6 @@
 
 @mixin basic-button() {
   margin: 0;
-  padding: 0;
   background-color: $basic-green;
   color: $white;
   display: block;
@@ -43,4 +42,35 @@
   text-decoration: none;
   border: 0;
   outline: 0;
+  font-family: $secondary-font;
+  cursor: pointer;
+  padding: 0 20px;
+
+  &:hover,
+  &:focus {
+    background-color: $green-active;
+  }
+
+  &:active {
+    color: $white-active;
+  }
+}
+
+@mixin grey-button() {
+  margin: 0;
+  background-color: $darkF2;
+  color: $dark4;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  font-family: $secondary-font;
+  cursor: pointer;
+  padding: 10px 20px;
+
+  &:hover,
+  &:focus {
+    background-color: $grey-active;
+  }
 }

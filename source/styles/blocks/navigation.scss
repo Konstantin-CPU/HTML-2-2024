@@ -1,9 +1,9 @@
 .navigation {
   display: none;
+}
 
-  &--opened {
-    display: block;
-  }
+.navigation--opened {
+  display: block;
 }
 
 .navigation__list {
@@ -42,27 +42,39 @@
     display: flex;
     flex-wrap: wrap;
     gap: 33px;
+    max-width: 450px;
   }
 
   .navigation__link {
     border: 0;
     font-size: 18px;
     line-height: 24px;
-    padding: 11px 0 8px;
+    padding: 16px 0 8px;
+    max-width: 160px;
+  }
 
-    &--current {
-      border-bottom: 2px solid $basic-green;
-    }
+  .navigation__link--current {
+    border-bottom: 2px solid $basic-green;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .navigation__list {
+    max-width: 900px;
+  }
+
   .navigation__link {
     font-size: 20px;
     line-height: 30px;
-    color: $white;
+    max-width: 190px;
+  }
 
-    &--current {
+  .navigation--index {
+    .navigation__link {
+      color: $white;
+    }
+
+    .navigation__link--current {
       border-bottom: 2px solid $white;
     }
   }
