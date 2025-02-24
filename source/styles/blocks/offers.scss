@@ -33,7 +33,7 @@
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  margin-bottom: 0 0 24px;
+  margin: 0 0 24px;
 }
 
 .offers__input {
@@ -54,11 +54,12 @@
 
   &:focus {
     border-color: $dark4;
-    border-width: 2px;
+    outline: 1px solid $dark4;
   }
 
   &:invalid {
     border-color: $error;
+    outline: 1px solid $error;
   }
 }
 

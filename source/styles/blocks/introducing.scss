@@ -37,7 +37,8 @@
   font-size: 36px;
   line-height: 36px;
   color: $white;
-  margin-bottom: 25px;
+  width: 250px;
+  margin: 0 auto 25px;
 }
 
 .introducing__text {
@@ -86,6 +87,7 @@
     color: $black;
     text-align: left;
     margin-bottom: 40px;
+    width: unset;
   }
 
   .introducing__text {
@@ -144,6 +146,10 @@
         background-image: url("../../images/index-background-desktop@2x.jpg");
       }
     }
+  }
+
+  .introducing__text {
+    max-width: 400px;
   }
 
   .introducing__wrapper {
